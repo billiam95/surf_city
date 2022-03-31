@@ -10,8 +10,8 @@ export default function Delete({data}) {
 
   const handleDelete = (e) => {
     e.preventDefault()
-    fetch("/api/removeSurfSpotUser", {
-      method: "POST",
+    fetch("/api/removeSpot", {
+      method: "DELETE",
       headers:
       {
       "Content-Type": "application/json",

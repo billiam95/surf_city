@@ -12,5 +12,5 @@ export default async function handler (req,res) {
 
     const deleteSurfSpot = await collection.deleteOne(spotToDelete);
     res.json(spotToDelete);
-    await client.close();
+    // await client.close();
 }

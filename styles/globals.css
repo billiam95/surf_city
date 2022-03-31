@@ -2,6 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
+  height: 100%;
+  background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -13,4 +15,53 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+p.info {
+  text-align: center;
+  border-radius: 20px;
+  background-color: grey;
+  padding: 10px;
+  color: white;
+  width: 15vw;
+}
+
+p.description {
+  word-wrap: break-word;
+  width: 40%;
+  justify-content: center;
+  text-align: center;
+  background-color: grey;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+}
+
+div.index{
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(whitesmoke, lightblue, #9FE2BF);
+  background-repeat: no-repeat;
+}
+
+.spotCard {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  /* border: .5px solid black; */
+  border-radius: 20px;
+  box-shadow: 3px 5px 5px 4px rgba(0,0,0,.7) ;
+  width: 45%;
+  height: 60vh;
+  margin-bottom: 10px;
+
+}
+
+.spotsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80%;
+  align-items: center;
+  grid-gap: 4%;
+  justify-content: center;
 }
