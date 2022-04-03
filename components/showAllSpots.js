@@ -1,5 +1,5 @@
 import useSWR from 'swr';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import DeleteButton from './deleteButton.js'
 import Image from 'next/image'
 
@@ -23,6 +23,8 @@ export default function ShowAllSpots(){
       return (<div>failed to load</div>)
   }
 
+
+
   // name: document.getElementById('name').value,
   // city: document.getElementById('city').value,
   // region: document.getElementById('region').value,
@@ -40,15 +42,28 @@ export default function ShowAllSpots(){
           </h2>
         </div>
         <div className="spotinfo">
-          <img className="spotImage" src={data[i].image}></img>
-          <h3>City: </h3>
-          <p className="info">{data[i].city}</p>
-          <h3>Region: </h3>
-          <p className="info">{data[i].region}</p>
-          <h3>Country: </h3>
-          <p className="info">{data[i].country}</p>
-          <h3>Description: </h3>
-          <p className="description">{data[i].description}</p>
+          <img
+          className="spotImage" src={data[i].image}></img>
+          <div className="writtenInfo">
+              <div className="itemDiv">
+                  <h3 className="infoHeader">City: </h3>
+                  <p className="info">{data[i].city}</p>
+              </div>
+              <div className="itemDiv">
+                  <h3 className="infoHeader">Region: </h3>
+                  <p className="info">{data[i].region}</p>
+              </div>
+              <div className="itemDiv">
+                  <h3 className="infoHeader">Country: </h3>
+                  <p className="info">{data[i].country}</p>
+              </div>
+          </div>
+          <div className="descriptionContainer">
+              <div className="descriptionItem">
+                  <h3 className="infoHeader">Description: </h3>
+                  <p className="description">{data[i].description}</p>
+              </div>
+          </div>
           <DeleteButton data={data[i]}/>
         </div>
       </div>)
@@ -66,7 +81,6 @@ export default function ShowAllSpots(){
 
   return(
     <>
-      <h1>SURF SPOTS</h1>
       <div className="spotsContainer">
         {spotsMap}
       </div>

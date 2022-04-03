@@ -5,6 +5,7 @@ export default async function handler (req,res) {
     console.log('reaching backend')
     console.log(req.body)
     const spotToDelete = req.body
+
     console.log(spotToDelete)
     const client = await MongoClient.connect(process.env.MONGODB_URI);
     const db = client.db();

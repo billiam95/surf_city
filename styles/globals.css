@@ -17,31 +17,82 @@ a {
   box-sizing: border-box;
 }
 
+h2.spotName {
+  color: white;
+  background-color: rgba(0,0,0,.6);
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px
+
+}
+
 p.info {
   text-align: center;
   border-radius: 20px;
-  background-color: grey;
-  padding: 10px;
+  background-color: rgba(255,90,0,0.5);
+  padding: 5px;
+  color: black;
+  width: 150px;
+  display: inline-block;
+  margin-top: 0;
+
+}
+
+.infoHeader {
+  text-align: center;
+  border-radius: 20px;
+  background-color: rgba(0,0,0,.6);
+  padding: 2.25px;
   color: white;
-  width: 15vw;
+  width: 150px;
+  margin-bottom: 0
 }
 
 p.description {
   word-wrap: break-word;
-  width: 40%;
-  justify-content: center;
+  width: 95%;
   text-align: center;
-  background-color: grey;
+  background-color: rgba(255,90,0,0.5);
   border-radius: 20px;
   padding: 10px;
-  color: white;
+  color: black;
+  margin-top: 0
+}
+
+div.descriptionContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: 1px solid black; */
+  background-color: whitesmoke;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+div.descriptionItem {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 400px;
 }
 
 div.index{
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(whitesmoke, lightblue, #9FE2BF);
+  background-color: whitesmoke;
+  /* background-image: linear-gradient(#9FE2BF,lightblue, whitesmoke); */
   background-repeat: no-repeat;
+}
+
+.writtenInfo {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: 1px solid black; */
+  background-color: whitesmoke;
 }
 
 .spotCard {
@@ -50,9 +101,10 @@ div.index{
   padding: 15px;
   /* border: .5px solid black; */
   border-radius: 20px;
-  box-shadow: 3px 5px 5px 4px rgba(0,0,0,.7) ;
-  width: 45%;
-  height: 60vh;
+  box-shadow: 5px 7px 10px 5px rgba(255,90,0,0.6) ;
+  background-image: linear-gradient(whitesmoke, #9FE2BF, lightblue);
+  width: 500px;
+  height: 700px;;
   margin-bottom: 10px;
 
 }
@@ -64,4 +116,22 @@ div.index{
   align-items: center;
   grid-gap: 4%;
   justify-content: center;
+}
+
+
+img.spotImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 5px 7px 10px 5px rgba(0,0,0,.5);
+  margin-bottom: 12px;
+}
+
+div.navContainer {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(100,100,100, .5);
 }
