@@ -22,14 +22,13 @@ h2.spotName {
   background-color: rgba(0,0,0,.6);
   border-radius: 20px;
   text-align: center;
-  padding: 10px
-
+  padding: 10px;
 }
 
 p.info {
   text-align: center;
   border-radius: 20px;
-  background-color: rgba(255,90,0,0.5);
+  background-color: rgba(0,0,0,.1);
   padding: 5px;
   color: black;
   width: 150px;
@@ -45,14 +44,14 @@ p.info {
   padding: 2.25px;
   color: white;
   width: 150px;
-  margin-bottom: 0
+  margin-bottom: 2px;
 }
 
 p.description {
   word-wrap: break-word;
   width: 95%;
   text-align: center;
-  background-color: rgba(255,90,0,0.5);
+  background-color: rgba(0,0,0,.1);
   border-radius: 20px;
   padding: 10px;
   color: black;
@@ -101,11 +100,11 @@ div.index{
   padding: 15px;
   /* border: .5px solid black; */
   border-radius: 20px;
-  box-shadow: 5px 7px 10px 5px rgba(255,90,0,0.6) ;
+  box-shadow: 5px 7px 10px 5px rgba(0,0,0,0.6) ;
   background-image: linear-gradient(whitesmoke, #9FE2BF, lightblue);
   width: 500px;
-  height: 700px;;
-  margin-bottom: 10px;
+  height: 750px;;
+  margin-bottom: 35px;
 
 }
 
@@ -128,10 +127,28 @@ img.spotImage {
 }
 
 div.navContainer {
+  position: sticky;
+  top: 0;
   width: 100vw;
   height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(100,100,100, .5);
+  background-color: rgba(100,100,100, .7);
+  margin-bottom: 40px;
+}
+
+.navLink:hover {
+cursor: pointer;
+transform: scale(1.5);
+}
+
+.navLink {
+  color: white;
+}
+
+.appTitle {
+  font-family: 'Comforter Brush', cursive;
+  color: white;
+  font-size: 2.5em;
 }

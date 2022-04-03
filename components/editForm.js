@@ -1,7 +1,7 @@
 
 
 
-export default function EditForm() {
+export default function EditForm({data}) {
 
 
   const saveSurfSpot = (spot) => {
@@ -33,22 +33,22 @@ export default function EditForm() {
   return(
     <form onSubmit={(e)=> {handleSubmit(e)}}>
       <label>Name
-      <input type="text" id="name" name="name" required/>
+      <input type="text" id="name" name="name" value={data.name} required/>
       </label><br/><br/>
       <label>City
-      <input type="text" id="city" name="city" required/>
+      <input type="text" id="city" name="city" value={data.city} required/>
       </label><br/><br/>
       <label>Region
-      <input type="text" id="region" name="region" required/>
+      <input type="text" id="region" name="region" value={data.region} required/>
       </label><br/><br/>
       <label>Country
-      <input type="text" id="country" name="country" required/>
+      <input type="text" id="country" name="country" value={data.country} required/>
       </label><br/><br/>
       <label>Description
-      <textarea type="text" id="description" name="description" required/>
+      <textarea type="text" id="description" name="description" value={data.description} required/>
       </label><br/><br/>
       <label>Image
-      <input type="text" id="image" name="image" required/>
+      <input type="text" id="image" name="image" value={data.image} required/>
       </label><br/><br/>
 
       <input type="submit" value="Submit" />

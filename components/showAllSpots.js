@@ -2,12 +2,15 @@ import useSWR from 'swr';
 import { useState, useEffect } from 'react';
 import DeleteButton from './deleteButton.js'
 import Image from 'next/image'
-
+import EditForm from './editForm.js'
 
 export default function ShowAllSpots(){
 
+const [toggleEdit, setToggleEdit] = useState(false)
+
+
   // Itinitialize fetcher for api calls to backend using 'useSWR'
-  const fetcher = url => fetch(url).then(r => r.json());
+  const fetcher = (url) => fetch(url).then(r => r.json());
 
   const {data, error} = useSWR(`http://localhost:3000/api/getAllSpots`, fetcher);
 
@@ -32,10 +35,22 @@ export default function ShowAllSpots(){
   // description: document.getElementById('description').value,
   // image: document.getElementById('image').value
 
+
+//toggle the edit field in each card
+  // const editForm = () => {
+  //   setToggleEdit(!toggleEdit)
+  // }
+
+
+
+
+//mapping the information from the database
   if (data) {
     for(let i=0; i<data.length; i++) {
       spotsMap.push(
       <div className="spotCard" key={"spot" + i}>
+        { !toggleEdit ?
+        <div>
         <div className="spotHeader">
           <h2 className="spotName">
             {data[i].name}
@@ -64,18 +79,15 @@ export default function ShowAllSpots(){
                   <p className="description">{data[i].description}</p>
               </div>
           </div>
+        </div>
+        </div> : <EditForm data={data[i]} />
+        }
+        <div className="cardButtons">
           <DeleteButton data={data[i]}/>
+          <button onClick={()=>setToggleEdit(!toggleEdit)}>Edit</button>
         </div>
       </div>)
     }
-    // make a hook to use map correctly
-    // const map = data.map((spot) => {
-    //   return (
-    //     <div key={spot._id}>{spot[i].name}</div>
-    //   )
-    // })
-
-    console.log(spotsMap)
   }
 
 
