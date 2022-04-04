@@ -5,8 +5,8 @@ export default async function handler (req,res) {
 
 
     const spotToEdit = req.body;
-
-    console.log(spotToEdit._id);
+    console.log('making it here')
+    console.log(spotToEdit);
     const client = await MongoClient.connect(process.env.MONGODB_URI);
     const db = client.db();
     const collection = db.collection('surfspots');
@@ -28,9 +28,10 @@ export default async function handler (req,res) {
             }
     }
 
+    console.log(match)
+     console.log(updateTo)
 
     const editSurfSpot = await collection.updateOne( match, updateTo)
-
 
     res.json(editSurfSpot);
     await client.close();

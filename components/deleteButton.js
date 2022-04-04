@@ -1,8 +1,10 @@
 import useSWR from 'swr';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 
 export default function Delete({data}) {
+  const router = useRouter();
   console.log(data)
   const newVar = {
     name: data.name
@@ -18,6 +20,8 @@ export default function Delete({data}) {
       },
       body: JSON.stringify(newVar),
     })
+    // page reload
+    return router.push(router.asPath);
   }
 
 
