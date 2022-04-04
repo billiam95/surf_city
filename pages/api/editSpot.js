@@ -33,6 +33,8 @@ export default async function handler (req,res) {
 
     const editSurfSpot = await collection.updateOne( match, updateTo)
 
+
+    console.log(editSurfSpot)
     res.json(editSurfSpot);
     await client.close();
 }
