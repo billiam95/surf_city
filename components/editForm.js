@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import {useRouter} from 'next/router'
 
-export default function EditForm({data}) {
+export default function EditForm({data}, {toggleEdit}, {setToggleEdit}) {
 const router = useRouter();
   // const [spot, setSpot] = useState({
   //   _id: '',
@@ -31,9 +31,10 @@ const router = useRouter();
       })
       .catch((error) => {
         console.log(error.response);
-  })
-  return router.push('/');
-}
+      })
+
+      return router.push('/showSpots');
+  }
 
   const handleSubmit = (e) => {
       e.preventDefault()
@@ -48,6 +49,8 @@ const router = useRouter();
           };
       console.log(spot);
       editSurfSpot(spot);
+      setToggleEdit(!toggleEdit);
+
 
     }
 
