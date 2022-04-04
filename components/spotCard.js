@@ -62,6 +62,9 @@ export default function SpotCard({spot}) {
 
     return (
           toggleEdit ? cardData :
-          <EditForm toggleEdit={toggleEdit} setToggleEdit={setToggleEdit} data={spot}/>
+          <EditForm
+          onClick={clickHandler}
+          data={spot}/>
+
     )
 }
