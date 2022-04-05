@@ -46,6 +46,31 @@ p.info {
   margin-bottom: 2px;
 }
 
+.labelHeader {
+  background-color: rgba(0,0,0,.6);
+  padding: 5px;
+  color: white;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+input {
+  display: inline-block;
+  border-radius: 20px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 300px;
+  height: 100px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
 p.description {
   word-wrap: break-word;
   width: 95%;
@@ -101,8 +126,8 @@ div.index{
   box-shadow: 5px 7px 10px 5px rgba(0,0,0,0.6) ;
   background-image: linear-gradient(whitesmoke, #9FE2BF, lightblue);
   width: 500px;
-  height: 750px;;
-  margin-bottom: 35px;
+  height: 750px;
+  margin-top: 40px;
 
 }
 
@@ -123,6 +148,12 @@ img.spotImage {
   margin-bottom: 12px;
 }
 
+img.homeImage {
+  width: 80vw;
+  margin-bottom: 20px;
+  box-shadow: 5px 7px 10px 10px rgba(0,0,0,.5);
+}
+
 div.navContainer {
   position: sticky;
   top: 0;
@@ -132,7 +163,7 @@ div.navContainer {
   justify-content: space-around;
   align-items: center;
   background-color: rgba(100,100,100, .7);
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .navLink:hover {
@@ -142,10 +173,21 @@ transform: scale(1.5);
 
 .navLink {
   color: white;
+  font-family: 'Comforter Brush', cursive;
+  font-size: 2em;
 }
 
 .appTitle {
   font-family: 'Comforter Brush', cursive;
   color: white;
   font-size: 2.5em;
+}
+
+.welcomeMessage{
+  font-family: 'Comforter Brush', cursive;
+  font-size: 3em;
+}
+
+.welcomeHeader {
+
 }

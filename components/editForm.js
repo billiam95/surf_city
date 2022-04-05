@@ -53,29 +53,33 @@ const router = useRouter();
     }
 
   return(
+    <div className="spotCard">
     <form onSubmit={(e)=> {handleSubmit(e)}}>
-      <label>Name
+      <label className="labelHeader">Name</label><br/>
       <input type="text" id="name" name="name" value={name} onChange={(e)=>{setName(e.target.value)}} required/>
-      </label><br/><br/>
-      <label>City
+      <br/><br/>
+      <label className="labelHeader">City</label><br/>
       <input type="text" id="city" name="city" value={city} onChange={(e)=>{setCity(e.target.value)}} required/>
-      </label><br/><br/>
-      <label>Region
+      <br/><br/>
+      <label className="labelHeader">Region</label><br/>
       <input type="text" id="region" name="region" value={region} onChange={(e)=>{setRegion(e.target.value)}} required/>
-      </label><br/><br/>
-      <label>Country
+      <br/><br/>
+      <label className="labelHeader">Country</label><br/>
       <input type="text" id="country" name="country" value={country} onChange={(e)=>{setCountry(e.target.value)}} required/>
-      </label><br/><br/>
-      <label>Description
+      <br/><br/>
+      <label className="labelHeader">Description</label><br/>
       <textarea type="text" id="description" name="description" value={description} onChange={(e)=>{setDescription(e.target.value)}} required/>
-      </label><br/><br/>
-      <label>Image
+      <br/><br/>
+      <label className="labelHeader">Image</label><br/>
       <input type="text" id="image" name="image" value={image} onChange={(e)=>{setImage(e.target.value)}}
       />
-      </label><br/><br/>
+      <br/><br/>
 
       <input type="submit" value="Submit" />
     </form>
+    <button>Back</button>
+    </div>
+
   )
 }
 

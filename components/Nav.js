@@ -17,10 +17,10 @@ const Nav = () => {
             <h3 className="navLink appTitle">SWELL</h3>
         </Link>
         <Link href="/showSpots">
-            <h3 className="navLink">Spots</h3>
+            <h3 className="navLink">SPOTS</h3>
         </Link>
         <Link href="/addSpotPage">
-            <h3 className="navLink">Add</h3>
+            <h3 className="navLink">ADD</h3>
         </Link>
     </div>
   )

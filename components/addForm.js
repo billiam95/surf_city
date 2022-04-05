@@ -31,27 +31,29 @@ export default function AddForm() {
     }
 
   return(
-    <form onSubmit={(e)=> {handleSubmit(e)}}>
-      <label>Name
-      <input type="text" id="name" name="name" required/>
-      </label><br/><br/>
-      <label>City
-      <input type="text" id="city" name="city" required/>
-      </label><br/><br/>
-      <label>Region
-      <input type="text" id="region" name="region" required/>
-      </label><br/><br/>
-      <label>Country
-      <input type="text" id="country" name="country" required/>
-      </label><br/><br/>
-      <label>Description
-      <textarea type="text" id="description" name="description" required/>
-      </label><br/><br/>
-      <label>Image
-      <input type="text" id="image" name="image" required/>
-      </label><br/><br/>
+    <center><div className="spotCard">
+        <form onSubmit={(e)=> {handleSubmit(e)}}>
+          <label className="labelHeader">Name</label><br/>
+          <input type="text" id="name" name="name" required/>
+          <br/><br/>
+          <label className="labelHeader">City</label><br/>
+          <input type="text" id="city" name="city" required/>
+          <br/><br/>
+          <label className="labelHeader">Region</label><br/>
+          <input type="text" id="region" name="region" required/>
+          <br/><br/>
+          <label className="labelHeader">Country</label><br/>
+          <input type="text" id="country" name="country" required/>
+          <br/><br/>
+          <label className="labelHeader">Description</label><br/>
+          <textarea type="text" id="description" name="description" required/>
+          <br/><br/>
+          <label className="labelHeader">Image</label><br/>
+          <input type="text" id="image" name="image" required/>
+          <br/><br/>
 
-      <input type="submit" value="Submit" />
-    </form>
+          <input type="submit" value="Submit" />
+        </form>
+    </div></center>
   )
 }

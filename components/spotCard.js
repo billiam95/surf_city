@@ -47,8 +47,11 @@ export default function SpotCard(props) {
       </div>
       </div>
       <div className="cardButtons">
-        <DeleteButton data={props.spot}/>
         <button onClick={() => setToggleEdit(!toggleEdit)}>Edit</button>
+        <DeleteButton
+        data={props.spot}
+        getAllSpots={props.getAllSpots}
+        />
       </div>
     </div>
 
