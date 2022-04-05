@@ -76,8 +76,8 @@ const router = useRouter();
       <br/><br/>
 
       <input type="submit" value="Submit" />
+      <button>Back</button>
     </form>
-    <button>Back</button>
     </div>
 
   )

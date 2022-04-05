@@ -59,6 +59,11 @@ input {
   border-radius: 20px;
 }
 
+button {
+  display: inline-block;
+  border-radius: 20px;
+}
+
 label {
   display: inline-block;
   margin-bottom: 10px;
@@ -186,8 +191,4 @@ transform: scale(1.5);
 .welcomeMessage{
   font-family: 'Comforter Brush', cursive;
   font-size: 3em;
-}
-
-.welcomeHeader {
-
 }
