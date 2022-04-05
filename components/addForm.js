@@ -1,8 +1,8 @@
-import axios from 'axios'
-
+import axios from 'axios';
+import { useRouter } from 'next/router';
 
 export default function AddForm() {
-
+  const router = useRouter();
 
   const saveSurfSpot = (spot) => {
     axios.post('/api/createSpot', spot)
@@ -27,6 +27,7 @@ export default function AddForm() {
           };
       console.log(spot);
       saveSurfSpot(spot);
+      router.push('/')
 
     }
 
