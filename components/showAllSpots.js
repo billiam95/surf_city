@@ -23,7 +23,7 @@ const [spotsMap, setSpotsMap] = useState([])
   // }
 
   const getAllSpots = () => {
-    axios.get('http://localhost:3000/api/getAllSpots')
+    axios.get('/api/getAllSpots')
         .then((response) => {
             console.log('data retrieved successfully')
             setSpotsMap(response.data)

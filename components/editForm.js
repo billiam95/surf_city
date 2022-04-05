@@ -23,7 +23,7 @@ const router = useRouter();
 
   const editSurfSpot = (spot) => {
     console.log('making it to editSurfSpot func')
-    axios.put('http://localhost:3000/api/editSpot', spot)
+    axios.put('/api/editSpot', spot)
       .then((response) => {
         console.log('the response is')
         console.log(response.data);

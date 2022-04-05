@@ -5,7 +5,7 @@ export default function AddForm() {
 
 
   const saveSurfSpot = (spot) => {
-    axios.post('http://localhost:3000/api/createSpot', spot)
+    axios.post('/api/createSpot', spot)
       .then((response) => {
         console.log(response)
         getItems()

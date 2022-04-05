@@ -26,7 +26,7 @@ export default function Delete(props) {
 
 
   const handleDelete = () => {
-    axios.delete('http://localhost:3000/api/removeSpot', { data: newVar })
+    axios.delete('/api/removeSpot', { data: newVar })
       .then((response) => {
         console.log('hitting .then')
         console.log(response)
